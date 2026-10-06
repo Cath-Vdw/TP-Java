@@ -34,7 +34,7 @@ public class Employe {
     // Ajoute le nombre d'heures reçu en paramètre à nbHeures,
     // puis affiche le total d'heures du mois
     public void travaille(int heures) {
-        nbHeures = nbHeures + heures;
+        nbHeures += heures;
         System.out.println(nom + " : " + nbHeures + " heures ce mois-ci");
     }
 
@@ -43,7 +43,7 @@ public class Employe {
     public float salaire() {
         float s = nbHeures * salaireHoraire;
         if (acompte) {
-            s = s - 500;
+            s -= 500;
         }
         return s;
     }
