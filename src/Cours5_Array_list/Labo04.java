@@ -121,9 +121,9 @@ public class Labo04 {
 
         while (actif) {
             displayMenu();
-            String choix = sc.nextLine();
+            String choice = sc.nextLine();
 
-            switch (choix) {
+            switch (choice) {
                 case "1":
                     addTask(tasks, sc);
                     break;
