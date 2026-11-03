@@ -115,7 +115,7 @@ public class Labo04 {
     }
 
     public static void main(String[] args) {
-        ArrayList<String> taches = new ArrayList<>();
+        ArrayList<String> tasks = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         boolean actif = true;
 
@@ -125,16 +125,16 @@ public class Labo04 {
 
             switch (choix) {
                 case "1":
-                    addTask(taches, sc);
+                    addTask(tasks, sc);
                     break;
                 case "2":
-                    displayTasks(taches);
+                    displayTasks(tasks);
                     break;
                 case "3":
-                    deleteTask(taches, sc);
+                    deleteTask(tasks, sc);
                     break;
                 case "4":
-                    rechercherTache(taches, sc);
+                    rechercherTache(tasks, sc);
                     break;
                 case "0":
                     actif = false;
