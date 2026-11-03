@@ -32,9 +32,9 @@ public class Book {
         System.out.println("Le livre " + title + " a bien été rendu.");
     }
 
-   public void describe(){
-       System.out.println(author + " - " + title);
-   }
-
+    public String describe() {
+        String status = isTaken ? "emprunté" : "disponible";
+        return author + " - " + title + " (" + status + ")";
+    }
 
 }

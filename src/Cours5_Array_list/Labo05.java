@@ -18,7 +18,7 @@ public class Labo05 {
 
         // Afficher le catalogue complet
         System.out.println("Titres disponibles: ");
-        for(Book book : library) book.describe();
+        for(Book book : library) System.out.println(book.describe());
 
         // Chercher un titre par son livre puis l'emprunter
         System.out.println("Encodez le titre du livre à emprunter: ");
@@ -36,9 +36,6 @@ public class Labo05 {
             return;
         }
 
-        System.out.print("Titre à rechercher : ");
-        searchedTitle = searchedTitle.trim().toLowerCase(); // Met tout en lowercase pour avoir un match exact
-
         // Quitte la méthode si on tape sur enter par accident au lieu d'encoder le titre
         if (searchedTitle.isEmpty()) {
             System.out.println("Recherche vide");
@@ -46,7 +43,7 @@ public class Labo05 {
         }
 
             for (int i = 0; i < library.size(); i++) {
-                if (library.get(i).getTitle().toLowerCase().equals(searchedTitle)) {
+                if (library.get(i).getTitle().equalsIgnoreCase(searchedTitle)) {
                     System.out.println("Le livre se trouve bien dans la bibliothèque.");
                     if (library.get(i).isTaken()) {
                         System.out.println("Il est déjà emprunté.");
