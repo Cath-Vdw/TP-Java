@@ -2,6 +2,7 @@ package Cours5_Array_list;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Labo03 {
@@ -14,7 +15,8 @@ public class Labo03 {
         stocks.removeIf(stock -> stock == 0);
 //        stocks.set(1, 7);
         stocks.set(stocks.indexOf(8), 10);
-        Collections.sort(stocks);
+//        Collections.sort(stocks);
+        stocks.sort(Comparator.naturalOrder()); // à privilégier (chiffres ordre croissant - String ordre alphabétique)
         System.out.println("Arrivée: " + stocks);
     }
 }
