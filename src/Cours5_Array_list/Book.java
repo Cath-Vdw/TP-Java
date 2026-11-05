@@ -24,16 +24,16 @@ public class Book {
     // Méthodes
     public void borrowBook(){
         if(!isTaken) isTaken = true;
-        System.out.println("Le livre " + title + " a bien été emprunté.");
+        System.out.println("The book " + title + " has been borrowed.");
     }
 
     public void returnBook(){
         if(isTaken) isTaken = false;
-        System.out.println("Le livre " + title + " a bien été rendu.");
+        System.out.println("The book " + title + " has been returned.");
     }
 
     public String describe() {
-        String status = isTaken ? "emprunté" : "disponible";
+        String status = isTaken ? "borrowed" : "available";
         return author + " - " + title + " (" + status + ")";
     }
 
