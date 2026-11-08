@@ -29,7 +29,11 @@ public class Ticket {
     // Methods
 
     public void treatingTicket() {
-        if (!isTreated) isTreated = true;
+        if (!isTreated) {
+            isTreated = true;
+            System.out.println("Ticket " + this.id + " has been treated.");
+        } else System.out.println("Ticket " + this.id + " has already been treated.");
+
     }
 
     @Override
